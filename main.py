@@ -5,6 +5,7 @@ from services.config.workout_config import EXERCISE_OPTIONS
 from services.persistence.exercise_repository import init_db
 from streamlit_webrtc import webrtc_streamer, WebRtcMode
 from services.vision.exercise_video_processor import VideoProcessorClass
+from services.ui.style_loader import load_css, inject_local_font, inject_webrtc_styles
 
 
 
@@ -155,6 +156,6 @@ def main():
         )
  
     st.markdown("#### Workout History")
-
+inject_webrtc_styles()
 if __name__ == "__main__":
     main()
